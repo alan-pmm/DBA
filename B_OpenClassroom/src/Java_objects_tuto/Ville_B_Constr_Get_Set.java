@@ -1,5 +1,5 @@
 package Java_objects_tuto;
-public class Ville_B {
+public class Ville_B_Constr_Get_Set {
  
   protected String nomVille;
   protected String nomPays;
@@ -8,7 +8,7 @@ public class Ville_B {
   
   //Les autres variables n'ont pas changé
   //CONSTRUCTEUR
-  public Ville_B(){
+  public Ville_B_Constr_Get_Set(){
     System.out.println("Création d'une ville !");          
     nomVille = "Inconnu";
     nomPays = "Inconnu";
@@ -16,7 +16,7 @@ public class Ville_B {
     this.setCategorie();
   }
   //CONSTRUCTEUR
-  public Ville_B(String pNom, int pNbre, String pPays)
+  public Ville_B_Constr_Get_Set(String pNom, int pNbre, String pPays)
   {
     System.out.println("Création d'une ville avec des paramètres !");
     nomVille = pNom;
@@ -25,16 +25,15 @@ public class Ville_B {
     this.setCategorie();
   }  
   
-
+ //GETTERS SETTERS
   //Retourne le nom de la ville
   public String getNom()  {  
     return nomVille;
   }
 
   //Retourne le nom du pays
-  public String getNomPays()
-  {
-    return nomPays;
+  public String getNomPays(){
+	 return nomPays;
   }
 
   // Retourne le nombre d'habitants
@@ -85,9 +84,13 @@ public class Ville_B {
   public String decrisToi(){
     return "\t"+this.nomVille+" est une ville de "+ this.nomPays+ ", elle comporte : "+this.nbreHabitants+" habitant(s) => elle est donc de catégorie : "+ this.categorie;
   }
+  
+  public String toString(){
+	  return "\t"+this.nomVille+" est une ville de "+this.nomPays+", elle comporte : "+this.nbreHabitants+" => elle est donc de catégorie : "+this.categorie;
+	  }
 
   //Retourne une chaîne de caractères selon le résultat de la comparaison
-  public String comparer(Ville_B v1){
+  public String comparer(Ville_B_Constr_Get_Set v1){
     String str = new String();
 
     if (v1.getNombreHabitants() > this.nbreHabitants)
@@ -100,7 +103,7 @@ public class Ville_B {
   }
   
   // I HAVE CREATED THIS METHOD THIS MAKE AN ADDITION
-  public String Addition(Ville_B some_B_Ville, Ville_B again_B_Ville) {
+  public String Addition(Ville_B_Constr_Get_Set some_B_Ville, Ville_B_Constr_Get_Set again_B_Ville) {
 	  int b = this.nbreHabitants + some_B_Ville.getNombreHabitants() + again_B_Ville.getNombreHabitants();
 	  return "avec la ville de: " + this.nomVille + " et la ville de: "  + some_B_Ville.nomVille + " et la ville de " + again_B_Ville.nomVille + " ,la somme est de: " + b;
   }

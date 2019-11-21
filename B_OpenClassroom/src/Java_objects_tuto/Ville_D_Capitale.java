@@ -1,6 +1,6 @@
 package Java_objects_tuto;
 
-public class Ville_D_Capitale extends Ville_C  {
+public class Ville_D_Capitale extends Ville_C_heritage  {
 	private String monument;
 	
 	//CONSTRUCTOR 1
@@ -21,12 +21,17 @@ public class Ville_D_Capitale extends Ville_C  {
 		this.monument = "Le Capitole ";
 	}
 	
-	//CONSTRUCTOR 3
+		
+	
+	//UNHERITED METHOD FROM Ville_D_Capitale
 	//public String decrisToi(){
 	//    String str = super.decrisToi() + "\n \t ==>>" + this.monument + "en est un monument";
-	 //   return str;
-	 //   } 
-
+	//    return str;
+	//    } 
+	
+	
+	
+	
 	public String getMonument() {
 		return monument;
 	}

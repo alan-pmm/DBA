@@ -1,6 +1,6 @@
 package Java_objects_tuto;
 
-	public class Ville_C extends Ville_B{
+	public class Ville_C_heritage extends Ville_B_Constr_Get_Set{
 		   
 		  //Variables publiques qui comptent les instances
 		  public static int nbreInstances = 0;
@@ -10,14 +10,14 @@ package Java_objects_tuto;
 		  
 		  //Les autres variables n'ont pas changé
 
-		  public Ville_C(){
+		  public Ville_C_heritage(){
 		    //On incrémente nos variables à chaque appel aux constructeurs
 		    nbreInstances++;
 		    nbreInstancesBis = nbreInstancesBis + 5;          
 		    //Le reste ne change pas.
 		  }
 
-		  public Ville_C(String pNom, int pNbre, String pPays)
+		  public Ville_C_heritage(String pNom, int pNbre, String pPays)
 		  {  
 		    //On incrémente nos variables à chaque appel aux constructeurs
 		    nbreInstances++;

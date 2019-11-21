@@ -34,7 +34,7 @@ class ClassMain_A{
 	  System.out.println(" v1 = "+v1.getNomVille()+" ville de  "+v1.getNbreHabitants()+ " habitants se situant en "+v1.getNomPays());
 	  System.out.println(" v2 = "+v2.getNomVille()+" ville de  "+v2.getNbreHabitants()+ " habitants se situant en "+v2.getNomPays()+"\n\n");
   
-	  Ville_B v0 = new Ville_B();
+	  Ville_B_Constr_Get_Set v0 = new Ville_B_Constr_Get_Set();
 	  System.out.println(v0.comparer(v0));
   }
 }
