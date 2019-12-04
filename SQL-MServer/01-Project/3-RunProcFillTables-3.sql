@@ -1,4 +1,4 @@
-USE [everis]
+USE [SQLSERVERDB]
 GO
 
 
@@ -23,13 +23,13 @@ WHILE @i  < 80
 BEGIN
 SET @f = 0 * @i + 3 + (COS(@i * SIN(@i)) * 3) -- I HAVE USED A COS OPERATOR FOR RANDOMIZATION
 SET @z = 0 * @i + 1 + (COS(@i * SIN(@i)) * 1)
---SET @f = COS(@i)  -- GENERATOR
+
 DECLARE @agent VARCHAR(10) = (SELECT name FROM #A WHERE ID = @f)
 DECLARE @estado VARCHAR(10) = (SELECT name FROM #B WHERE ID = @z)
 DECLARE @cobrado CHAR(1) = (SELECT name FROM #C WHERE ID = @z)
 DECLARE @facturado VARCHAR(10) = (SELECT name FROM #C WHERE ID = @z)
 DECLARE @pbook NUMERIC (10,2) = (SELECT ABS(CHECKSUM(NewId())) % 100 + @i)
-DECLARE @tipo VARCHAR (10) = (SELECT CASE 
+DECLARE @tipo VARCHAR (10) = (CASE 
 			   WHEN @f = 0 THEN 'VUELO'
                WHEN @f > 0 AND @f < 3 THEN 'HOTEL'
 			   ELSE 'COCHE'
