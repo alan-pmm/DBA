@@ -8,7 +8,7 @@ order_id_counted INTEGER:=0;
 sales_date DATE;
 
 BEGIN
-WHILE i < 5
+WHILE i < 50
 
 LOOP
 i := i + 1;
