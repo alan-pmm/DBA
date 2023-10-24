@@ -27,6 +27,8 @@ CREATE TABLE ALAIN.a_order_history
     order_date TIMESTAMP (6), 
     product_id NUMBER(*,0), 
     person_id NUMBER(*,0),
+    f_1 VARCHAR(50),
+    f_2 VARCHAR(50),
 CONSTRAINT pk_order_line_id PRIMARY KEY(order_line_id)
 ) TABLESPACE ALAIN_SPACE
 
