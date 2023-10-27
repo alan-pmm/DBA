@@ -1,3 +1,7 @@
+rem =======================================================
+rem drop ref tables
+rem =======================================================
+@@db_drop_ref_tables.sql
 
 rem =======================================================
 rem create ref tables
@@ -7,6 +11,7 @@ rem =======================================================
 rem =======================================================
 rem drop and create BDD tables
 rem =======================================================
+
 @@dc_drop_bdd_a_tables_alain.sql
 @@ab_create_tables_alain_a_bdd.sql
 @@ac_alter_tables_alain_a_bdd.sql
@@ -24,6 +29,7 @@ rem =======================================================
 rem DROP REF tables
 rem =======================================================
 @@da_drop_sequences.sql
-rem @@db_drop_ref_tables.sql
+@@db_drop_ref_tables.sql
 rem == da_truncate_bdd_a_tables_alain.sql
 rem == db_db_alain_user_privileges_drop.sql
+rem ==@@ea_explain_plan_index_test_on_table_a_product.sql
